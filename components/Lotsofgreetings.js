@@ -10,9 +10,9 @@ render(){
 <>
     {this.props.images.forEach(element => {
       var obj= {uri: element, width: 1200, height: 1200};
-      return <Text>dsadsadsada</Text>//<Image source={obj} />
+      return <Image source={obj} />
     })}
-  </>);
+</>);
 }
 }
 
