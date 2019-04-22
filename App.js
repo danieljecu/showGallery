@@ -1,11 +1,5 @@
 import React, {Component} from 'react';
-import {
-    StyleSheet,
-    Text,
-    View,
-    ScrollView,
-    Image
-} from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image } from 'react-native'
 
 import Grid from './components/Grid'
 import ModalExample from './components/ModalExample'
@@ -32,12 +26,12 @@ export default class App extends Component {
 
                     {id: 'g', value: 'G', uri: "https://luehangs.site/pic-chat-app-images/animals-avian-beach-760984.jpg",
                     dimensions: { width: 1080, height: 1920 } },
-                {id: 'h', value: 'H', uri: "https://luehangs.site/pic-chat-app-images/beautiful-blond-fishnet-stockings-48134.jpg",
-                    dimensions: { width: 1080, height: 1920 } },
-                {id: 'i', value: 'I', uri: "https://luehangs.site/pic-chat-app-images/beautiful-beautiful-woman-beauty-9763.jpg",
-                    dimensions: { width: 1080, height: 1920 } },
-                {id: 'j', value: 'J', uri: "https://luehangs.site/pic-chat-app-images/attractive-balance-beautiful-186263.jpg",
-                    dimensions: { width: 1920, height: 1080 } },
+                    {id: 'h', value: 'H', uri: "https://luehangs.site/pic-chat-app-images/beautiful-blond-fishnet-stockings-48134.jpg",
+                        dimensions: { width: 1080, height: 1920 } },
+                    {id: 'i', value: 'I', uri: "https://luehangs.site/pic-chat-app-images/beautiful-beautiful-woman-beauty-9763.jpg",
+                        dimensions: { width: 1080, height: 1920 } },
+                    {id: 'j', value: 'J', uri: "https://luehangs.site/pic-chat-app-images/attractive-balance-beautiful-186263.jpg",
+                        dimensions: { width: 1920, height: 1080 } },
                 ]}
             
                 />
