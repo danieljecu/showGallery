@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
-import {Modal, Image,Text, TouchableHighlight, View, Alert} from 'react-native';
+import {Modal, Image,ScrollView,Text, TouchableHighlight, View, Alert} from 'react-native';
+
+import { StyleSheet } from 'react-native';
+import GallerySwiper from "react-native-gallery-swiper";
+
 
 export default class ModalExample extends Component {
   state = {
@@ -20,28 +24,59 @@ export default class ModalExample extends Component {
           onRequestClose={() => {
             Alert.alert('Modal has been closed.');
           }}>
-          <View style={{marginTop: 22}}>
-            <View>
-            <TouchableHighlight
+          
+            <ScrollView style={{backgroundColor:'black'}} >
+              <TouchableHighlight
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
-                }}>
-                <Text>Hide Modal</Text>
+                }}>          
+              <Text style={{flex:1}}> Press this bar to Hide Modal</Text>
               </TouchableHighlight>
-              <Text>Hello World!</Text>
-              <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 240, height: 240}} />
-              
-            </View>
-          </View>
+              <GallerySwiper style={{flex:1}}
+            images={[
+
+              {uri: "https://facebook.github.io/react-native/img/favicon.png", dimensions:{ width: 64, height: 64}},
+                { uri: "https://luehangs.site/pic-chat-app-images/beautiful-blond-blonde-hair-478544.jpg",
+                    // Optional: Adding a dimensions or height and
+                    // width field with the actual width and height
+                    // for REMOTE IMAGES will help improve performance.
+                    dimensions: { width: 1080, height: 1920 } },
+                { uri: "https://luehangs.site/pic-chat-app-images/beautiful-beautiful-women-beauty-40901.jpg",
+                    dimensions: { width: 1080, height: 1920 } },
+                { uri: "https://luehangs.site/pic-chat-app-images/animals-avian-beach-760984.jpg",
+                    dimensions: { width: 1080, height: 1920 } },
+            
+            ]}
+            // Change this to render how many items before it.
+            initialNumToRender={1}
+
+           
+                sensitiveScroll={false} /> 
+
+            </ScrollView>
+      
         </Modal>
+
 
         <TouchableHighlight
           onPress={() => {
             this.setModalVisible(true);
           }}>
+          <>
+          <Text>Set modal visible</Text>
            <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+          </>
         </TouchableHighlight>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
