@@ -78,6 +78,7 @@ export default class LotsOfGreetings extends Component {
             ]}
             // Change this to render how many items before it.
             initialNumToRender={1}
+            initialPage={1}
 
            
                 sensitiveScroll={false} /> 
