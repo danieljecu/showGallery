@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, ScrollView, Image } from 'react-native'
 
-import Grid from './components/Grid'
-import ModalExample from './components/ModalExample'
-
 import LotsOfGreetings from './components/Lotsofgreetings';
 
 export default class App extends Component {
@@ -35,9 +32,6 @@ export default class App extends Component {
                 ]}
             
                 />
-
-                {/* <Grid/>
-                <ModalExample/> */}
                         
             </ScrollView>
      

@@ -62,7 +62,6 @@ export default class LotsOfGreetings extends Component {
             data={data}
             renderItem={({ item, index }) => (
               <TouchableHighlight
-                style={styles.button}
                 onPress={() => this.setModalVisible(index)}
               >
                 <View style={[styles.itemContainer]}>
@@ -70,7 +69,7 @@ export default class LotsOfGreetings extends Component {
                     style={[styles.item]}
                     source={{ uri: item.uri }}
                   />
-                  <Text style={styles.textItemContainer}>Georgel</Text>
+                  <Text style={styles.textItemContainer}>{index}</Text>
                 </View>
               </TouchableHighlight>
             )}
@@ -84,9 +83,15 @@ export default class LotsOfGreetings extends Component {
           visible={this.state.modalVisible}
           onRequestClose={() => this.setModalVisible('exit')}
         >
-          <ScrollView style={{marginTop: 22}}>
-            <TouchableHighlight onPress={() => this.setModalVisible('exit')}>
-              <Text style={{ flex: 1 }}> Press this bar to Hide Modal</Text>
+          
+            <TouchableHighlight style={styles.button} onPress={() => this.setModalVisible('exit')}>
+              <Text style={{position: 'absolute',
+                            display: 'flex',
+                            top: 0,
+                            color: 'black',
+                            left: size / 3,
+                            backgroundColor:'red',
+                            flex:1}}> Press back or this bar to Hide Modal</Text>
             </TouchableHighlight>
             <GallerySwiper
               style={{ flex: 1 }}
@@ -94,15 +99,7 @@ export default class LotsOfGreetings extends Component {
               initialNumToRender={9}
               initialPage={this.state.imageIndex}
               sensitiveScroll={false}
-            />
-            <Image
-              source={{
-                uri: 'https://facebook.github.io/react-native/img/favicon.png',
-                width: 64,
-                height: 64,
-              }}
-            />
-          </ScrollView>
+            />         
         </Modal>
       </>
     )
