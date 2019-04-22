@@ -60,7 +60,7 @@ export default class LotsOfGreetings extends Component {
                       Alert.alert('Modal has been closed.');
                     }}>
                     
-                      <ScrollView style={{}} >
+                      {/* <ScrollView style={{}} > */}
                       <TouchableHighlight
                         onPress={() => {
                           this.setModalVisible(!this.state.modalVisible);
@@ -69,23 +69,14 @@ export default class LotsOfGreetings extends Component {
                       
                       </TouchableHighlight>
                       <GallerySwiper style={{flex:1}}
-            images={[
-
-              {uri: "https://facebook.github.io/react-native/img/favicon.png", dimensions:{ width: 64, height: 64}},
-                { uri: "https://luehangs.site/pic-chat-app-images/beautiful-blond-blonde-hair-478544.jpg",
-                    dimensions: { width: 1080, height: 1920 } },
-  
-            ]}
-            // Change this to render how many items before it.
-            initialNumToRender={1}
-            initialPage={1}
-
-           
-                sensitiveScroll={false} /> 
-                      <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                          images={data}
+                          // Change this to render how many items before it.
+                          initialNumToRender={2}
+                          initialPage={1}
+                          sensitiveScroll={false} /> 
                     
 
-                    </ScrollView>
+                    {/* </ScrollView> */}
 
                     </Modal>
                     
