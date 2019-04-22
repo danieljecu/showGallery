@@ -60,7 +60,7 @@ export default class LotsOfGreetings extends Component {
                       Alert.alert('Modal has been closed.');
                     }}>
                     
-                      {/* <ScrollView style={{}} > */}
+                      <ScrollView style={{marginTop: 22}} >
                       <TouchableHighlight
                         onPress={() => {
                           this.setModalVisible(!this.state.modalVisible);
@@ -76,7 +76,7 @@ export default class LotsOfGreetings extends Component {
                           sensitiveScroll={false} /> 
                     
 
-                    {/* </ScrollView> */}
+                    </ScrollView>
 
                     </Modal>
                     
